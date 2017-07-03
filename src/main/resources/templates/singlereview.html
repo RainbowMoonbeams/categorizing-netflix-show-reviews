@@ -6,12 +6,18 @@
 <body>
 	<header>this is my review for this show: </header>
 	<p>words go here...</p>
-	
+
 	<div th:each="currentReview: ${oneReview}">
 		<h2 th:text="${currentReview.title}"></h2>
 		<img th:src="${currentReview.imageUrl}"/>
 		<p th:text="${currentReview.review}"></p>
 	</div>
-
 </body>
+<footer>
+	<h5>All views and opinions are my own.</h5>
+	<h5>Images do not belong to me.</h5>
+	<h5>Site not endorsed by Netflix...</h5>
+	<h6>though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h6>
+	<h5>&copy;2017 Meaghan Rea</h5>
+</footer>
 </html>

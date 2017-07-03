@@ -18,7 +18,7 @@ public class Category {
 	
 	@OneToMany(mappedBy="category")
 	@OrderBy("title")
-	private Set<NetflixShow> shows;
+	private Set<NetflixShow> showsSet;
 	
 	public Category(String categoryName) {
 		this.categoryName = categoryName;
@@ -38,7 +38,7 @@ public class Category {
 	}
 
 	public Set<NetflixShow> getShows() {
-		return shows;
+		return showsSet;
 	}
 
 	public Category() {
