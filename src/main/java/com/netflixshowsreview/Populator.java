@@ -46,7 +46,7 @@ public class Populator implements CommandLineRunner {
 				+ "The two get in and out of all sorts of mischeif together.", "hilarious Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt "
 						+ "ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi "
 						+ "ut aliquip ex ea commodoconsequat.");
-		NetflixShow hatersBackOff = new NetflixShow("Haters Back Off", "/images/haters-back-ff.jpg", "creator", 0000, comedy, "Coleen... among others", "description", "review");
+		NetflixShow hatersBackOff = new NetflixShow("Haters Back Off", "/images/haters-back-off.jpg", "creator", 0000, comedy, "Coleen... among others", "description", "review");
 		
 		//drama:
 		NetflixShow houseOfCards = new NetflixShow("House of Cards", "/images/houseofcards.jpg", "Beau Willimon", 2013, drama, "Kevin Spacey, Robin Wright... among others",

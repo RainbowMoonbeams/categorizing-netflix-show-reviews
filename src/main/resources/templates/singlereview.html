@@ -9,6 +9,8 @@
 	
 	<div th:each="currentReview: ${oneReview}">
 		<h2 th:text="${currentReview.title}"></h2>
+		<img th:src="${currentReview.imageUrl}"/>
+		<p th:text="${currentReview.review}"></p>
 	</div>
 
 </body>
