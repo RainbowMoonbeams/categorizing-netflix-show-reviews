@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Netflix Shows</title>
+</head>
+<body>
+	<header>
+		<h2>this is a list of shows:</h2>
+	</header>
+		<p>some words go here</p>
+		<p>more words here</p>
+	
+	<div th:each="currentShow: ${show}">
+		<h2><a th:href="@{/singlereview(id=${currentShow.id})}"
+		th:text="${currentShow.title}"></a></h2>
+	</div>
+</body> 
+</html>

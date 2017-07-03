@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Netflix Categories</title>
+</head>
+<body>
+	<header>
+		<h2>this is a list of categories:</h2>
+	</header>
+	<div th:each="currentCategory: ${categories}">
+		<h2><a th:href="@{/netflixShow(id=${currentCategory.id})}"
+		th:text="${currentCategory.categoryName}"></a></h2>
+	</div>
+</body>
+</html>
