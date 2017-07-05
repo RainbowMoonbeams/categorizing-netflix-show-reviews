@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Single Review</title>
-	<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
-	<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto" rel="stylesheet"></link>
+<title>Single Review</title>
+<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
+<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto"
+	rel="stylesheet"></link>
 </head>
 <body>
+<header>
+		<h1>Netflix Shows Reviews</h1>
+		<h2 th:text="${currentReview.title}"></h2>
+	</header>
 	<div class="block-of-info">
 		<div th:each="currentReview: ${oneReview}">
 			<h2 th:text="${currentReview.title}"></h2>
-			<img th:src="${currentReview.imageUrl}"/>
+			<img th:src="${currentReview.imageUrl}" />
 			<p th:text="${currentReview.review}"></p>
 		</div>
 	</div>
@@ -18,7 +23,8 @@
 	<h5>All views and opinions are my own.</h5>
 	<h5>Images do not belong to me.</h5>
 	<h5>Site not endorsed by Netflix...</h5>
-	<h6>though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h6>
+	<h6>though I'm not above selling my soul to watch Netflix Shows
+		and write reviews about them if they want to pay me for it.</h6>
 	<h5>&copy;2017 Meaghan Rea</h5>
 </footer>
 </html>

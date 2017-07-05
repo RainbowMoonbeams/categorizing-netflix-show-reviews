@@ -1,7 +1,10 @@
 package com.netflixshowsreview;
 
+import java.util.logging.Logger;
+
 import javax.annotation.Resource;
 
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -25,15 +28,13 @@ public class NetflixController {
 	
 	@RequestMapping("/netflixShow")
 	public String fetchShow(@RequestParam("id") long id, Model model) {
-		NetflixShow showFromCategory = showRepo.findOne(id);
-		model.addAttribute("show", showFromCategory);
+		model.addAttribute(catRepo.findOne(id));
 		return "netflixshow";
 	}
 	
 	@RequestMapping("/singlereview")
 	public String fetchReview(@RequestParam("id") long id, Model model) {
-		NetflixShow selectedShow = showRepo.findOne(id);
-		model.addAttribute("oneReview", selectedShow);
+		model.addAttribute(showRepo.findOne(id));
 		return "singlereview";
 	}
 	

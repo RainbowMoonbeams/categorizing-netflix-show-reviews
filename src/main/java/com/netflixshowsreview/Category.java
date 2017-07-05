@@ -15,13 +15,17 @@ public class Category {
 	@GeneratedValue
 	private Long id;
 	private String categoryName;
-	
-	@OneToMany(mappedBy="category")
+
+	@OneToMany(mappedBy = "category")
 	@OrderBy("title")
 	private Set<NetflixShow> showsSet;
-	
-	public Category(String categoryName) {
-		this.categoryName = categoryName;
+
+	public Set<NetflixShow> getShowsSet() {
+		return showsSet;
+	}
+
+	public Long getId() {
+		return id;
 	}
 
 	public String getCategoryName() {
@@ -32,19 +36,13 @@ public class Category {
 	public String toString() {
 		return categoryName;
 	}
-	
-	public Long getId() {
-		return id;
-	}
 
-	public Set<NetflixShow> getShows() {
-		return showsSet;
+	public Category(String categoryName) {
+		this.categoryName = categoryName;
 	}
 
 	public Category() {
-		
+
 	}
-	
-	
-	
+
 }

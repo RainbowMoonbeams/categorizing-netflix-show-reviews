@@ -21,16 +21,20 @@ public class NetflixShow {
 	private int year;
 	private String creators;
 	private String stars;
-
-	@ManyToOne
-	@OrderBy("categoryName")
-	private Category category;
 	
 	@Lob
 	private String description;
 		
 	@Lob
 	private String review;
+	
+	@ManyToOne
+	@OrderBy("categoryName")
+	private Category category;
+	
+	public Category getCategory() {
+		return category;
+	}
 
 	public NetflixShow(String title, String imageUrl, String creators, int year, Category category, String stars, String description, String review) {
 		this.title = title;
@@ -55,12 +59,12 @@ public class NetflixShow {
 		return imageUrl;
 	}
 
+	public String getCreators() {
+		return creators;
+	}
+	
 	public int getYear() {
 		return year;
-	}
-
-	public Category getCategory() {
-		return category;
 	}
 
 	public String getDirector() {

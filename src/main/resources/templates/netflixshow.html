@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-	<title>Netflix Shows</title>
-	<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
-	<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto" rel="stylesheet"></link>
+<title>Netflix Shows</title>
+<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
+<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto"
+	rel="stylesheet"></link>
 </head>
 <body>
 	<header>
-		<h2>this is a list of shows with in the category:</h2>
+		<h1>Netflix Shows Reviews</h1>
+		<h2>- Overview of All Shows within Category -</h2>
 	</header>
-		<p>some words go here</p>
-		<p>more words here</p>
-	<div th:each="currentShow: ${show}">
-		<h2><a th:href="@{/singlereview(id=${currentShow.id})}"
-		th:text="${currentShow.title}"></a></h2>
+	<div class="block-of-info">
+		<div th:each="currentNetflixShow: ${category.showsSet}">
+			<h2><a th:href="@{/singlereview(id=${currentNetflixShow.id})}"
+					th:text="${currentNetflixShow.title}"></a>
+			</h2>
+			<p th:text="'Created by: ' + ${currentNetflixShow.creators}"></p>
+			<p th:text="'Starring: ' + ${currentNetflixShow.stars}"></p>
+			<p th:text="'Description: ' + ${currentNetflixShow.description}"></p>
+		</div>
 	</div>
-</body> 
+</body>
 <footer>
 	<h5>All views and opinions are my own.</h5>
 	<h5>Images do not belong to me.</h5>
 	<h5>Site not endorsed by Netflix...</h5>
-	<h6>though I'm not above selling my soul to watch Netflix Shows and write reviews about them if they want to pay me for it.</h6>
+	<h6>though I'm not above selling my soul to watch Netflix Shows
+		and write reviews about them if they want to pay me for it.</h6>
 	<h5>&copy;2017 Meaghan Rea</h5>
 </footer>
 </html>
