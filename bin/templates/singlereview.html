@@ -7,15 +7,16 @@
 	rel="stylesheet"></link>
 </head>
 <body>
-<header>
+	<header>
 		<h1>Netflix Shows Reviews</h1>
-		<h2 th:text="${currentReview.title}"></h2>
+		<h2 class="go-back-link"><a th:href="@{/netflixcategories(id=${categoriesAsCollection})}">Click to go back to categories page</a></h2>
 	</header>
 	<div class="block-of-info">
-		<div th:each="currentReview: ${oneReview}">
-			<h2 th:text="${currentReview.title}"></h2>
-			<img th:src="${currentReview.imageUrl}" />
-			<p th:text="${currentReview.review}"></p>
+		<div th:each="netflixShow: ${netflixShow}">
+			<img th:src="${netflixShow.imageUrl}" class="review-page-image" />
+			<h3>My review: </h3>
+			<p th:text="${netflixShow.review}"></p>
+			<h2 class="go-back-link"><a th:href="@{/netflixcategories(id=${categoriesAsCollection})}">Click to go back to categories page</a></h2>
 		</div>
 	</div>
 </body>

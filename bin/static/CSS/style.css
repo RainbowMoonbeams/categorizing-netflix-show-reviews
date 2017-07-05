@@ -1,50 +1,68 @@
 a link {
 	color: #f19f4d;
 }
-a:hover {
-	color: #f9cf00;
-}
 a:visited {
 	color: #f9cf00;	
 }
+a:hover {
+	color: #f9cf00;
+}
 body {
 	background-color: green;
+	margin: auto;
+	width: 60%;
+	padding: auto;
 }
-.block-of-info, .title-content {
+.block-of-info, .title-content, .content {
 	border: 10px solid #f19f4d;
 	padding: 30px;
-	background-color: #d9d9d9;
+	background-color: orange;
+}
+.content {
+	align-content: center;
+	align-items: center;
+	text-align: center;
 }
 h1, h2, h5 {
 	font-family: 'Fresca', sans-serif;
 }
-.category, .year, .content, .review {
+footer {
+	    margin-top: 40px;
+}
+.go-back-link {
+	text-align: center;
+}
+header {
+	align-content: center;
+	margin-bottom: 40px;
+}
+.category, .year, .content, .review, p {
 	font-family: 'Roboto', sans-serif;
 }
 .picture {
 	display: flex;
 	justify-content: flex-start;
 }
-.block-of-info {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
-	align-content: center;
-	align-items: center;
-}
+
 .picture {
 	margin: 30px;
 }
 .block-of-info, .title-content {
 	margin-bottom: 50px;
 }
-footer {
+header, footer {
 	background-color: #f19f4d;
 	padding: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
 	text-align: center;
 }
+.review-page-image {
+	display: block; 
+	margin: 0 auto;
+	margin-bottom: 30px;
+}
+
 .top-of-individual-page {
 	display: flex;
 	flex-flow: row wrap;

@@ -10,9 +10,10 @@
 	<header>
 		<h1>Netflix Shows Reviews</h1>
 		<h2>- Overview of All Shows within Category -</h2>
+		<h2 class="go-back-link"><a th:href="@{/netflixcategories(id=${categoriesAsCollection})}">Click to go back to categories page</a></h2>
 	</header>
-	<div class="block-of-info">
-		<div th:each="currentNetflixShow: ${category.showsSet}">
+	<div class="title-content">
+		<div th:each="currentNetflixShow: ${category.showsSet}" class="each-block-of-info">
 			<h2><a th:href="@{/singlereview(id=${currentNetflixShow.id})}"
 					th:text="${currentNetflixShow.title}"></a>
 			</h2>
@@ -20,6 +21,7 @@
 			<p th:text="'Starring: ' + ${currentNetflixShow.stars}"></p>
 			<p th:text="'Description: ' + ${currentNetflixShow.description}"></p>
 		</div>
+		<h2 class="go-back-link"><a th:href="@{/netflixcategories(id=${categoriesAsCollection})}">Click to go back to categories page</a></h2>
 	</div>
 </body>
 <footer>

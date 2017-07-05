@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<title>Netflix Categories</title>
-<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
-<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto"
+	<title>Netflix Categories</title>
+	<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto"
 	rel="stylesheet"></link>
 </head>
 <body class="the-body">
@@ -11,11 +11,13 @@
 		<h1>Netflix Shows Reviews</h1>
 		<h2>- Overview of All Categories -</h2>
 	</header>
-	<div th:each="currentCategory: ${categories}" class="title-content">
-		<h2>
-			<a th:href="@{/netflixShow(id=${currentCategory.id})}"
+	<div class="content">
+		<div th:each="currentCategory: ${categories}">
+			<h2>
+				<a th:href="@{/netflixShow(id=${currentCategory.id})}"
 				th:text="${currentCategory.categoryName}"></a>
-		</h2>
+			</h2>
+		</div>
 	</div>
 </body>
 <footer>
@@ -24,6 +26,6 @@
 	<h5>Site not endorsed by Netflix...</h5>
 	<h6>though I'm not above selling my soul to watch Netflix Shows
 		and write reviews about them if they want to pay me for it.</h6>
-	<h5>&copy;2017 Meaghan Rea</h5>
-</footer>
-</html>
+		<h5>&copy;2017 Meaghan Rea</h5>
+	</footer>
+	</html>
