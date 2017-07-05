@@ -1,0 +1,52 @@
+a link {
+	color: #f19f4d;
+}
+a:hover {
+	color: #f9cf00;
+}
+a:visited {
+	color: #f9cf00;	
+}
+body {
+	background-color: green;
+}
+.block-of-info, .title-content {
+	border: 10px solid #f19f4d;
+	padding: 30px;
+	background-color: #d9d9d9;
+}
+h1, h2, h5 {
+	font-family: 'Fresca', sans-serif;
+}
+.category, .year, .content, .review {
+	font-family: 'Roboto', sans-serif;
+}
+.picture {
+	display: flex;
+	justify-content: flex-start;
+}
+.block-of-info {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-content: center;
+	align-items: center;
+}
+.picture {
+	margin: 30px;
+}
+.block-of-info, .title-content {
+	margin-bottom: 50px;
+}
+footer {
+	background-color: #f19f4d;
+	padding: 20px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-align: center;
+}
+.top-of-individual-page {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}

@@ -37,7 +37,10 @@ public class Populator implements CommandLineRunner {
 		
 		//comedy:
 		NetflixShow unbreakKimmy = new NetflixShow("Unbreakable Kimmy Schmidt", "/images/unbreakable-kimmy-schmidt.jpg", "Tina Fey, Robert Carlock", 2015, comedy,
-				"Ellie Kemper, Jane Krakowski & Titus Burgess... among others", "description", "\"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt "
+				"Ellie Kemper, Jane Krakowski & Titus Burgess... among others", "Description: Lorem ipsum dolor sit amet, consectetur adipisicing elit, "
+						+ "sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, " 
+						+ "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " 
+						+ "consequat.", "Review: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt "
 						+ "ut labore et dolore magna aliqua. Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi "
 						+ "ut aliquip ex ea commodoconsequat.");
 //		NetflixShow wilfred = new NetflixShow("Wilfred", "/images/wilfred.jpg", "creator", 2011, comedy, "Elija Woood... among others", "Wilfred is a Netflix Original Comedy "
@@ -58,7 +61,13 @@ public class Populator implements CommandLineRunner {
 		
 		//dramedy:
 		NetflixShow glow = new NetflixShow("Glow", "/images/glow.jpg", "Liz Flahive, Carly Mensch", 2017, comedy,
-				"Alison Brie, Berry Gilpin & Marc Maron... among others", "description", "lorem ipsum asdflj aadslfjaewoij  vajdi;foijawe jfia;weoijf ");
+				"Alison Brie, Berry Gilpin & Marc Maron... among others", "Description: Lorem ipsum dolor sit amet, "
+						+ "consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim "
+						+ "veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo " 
+						+ "consequat. ", "Review: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod "
+						+ "tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, " 
+						+ "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo "
+						+ "consequat. lorem ipsum asdflj aadslfjaewoij  vajdi;foijawe jfia;weoijf ");
 //		NetflixShow flaked = new NetflixShow("Flaked", "/images/flaked.jpg", "Will Arnett, Mark Chappell", 2016, dramedy,
 //				"Will Arnett, David Sullivan, & Ruth Kearney... among others", "description", "lorem ipsum asdflj aadslfjaewoij  vajdi;foijawe jfia;weoijf ");
 //		NetflixShow love = new NetflixShow("Love", "/images/love.jpg", "creator", 2016, dramedy, "Gillian Peters, Paul Rust... among others", "A boy and girl meet in a convenience store. They hit it off and their relationship turns into a \"thing\"" 

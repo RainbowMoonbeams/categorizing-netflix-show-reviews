@@ -2,13 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
 	<title>Netflix Categories</title>
-	<link rel="stylesheet" type="text/css" href="categorizedNetflixReviews.css"></link>
+	<link rel="stylesheet" type="text/css" href="/CSS/style.css"></link>
+	<link href="https://fonts.googleapis.com/css?family=Fresca|Roboto" rel="stylesheet"></link>
 </head>
-<body>
-	<header>
-		<h2>this is a list of categories:</h2>
-	</header>
-	<div th:each="currentCategory: ${categories}">
+<body class="the-body">
+<header>
+	<h1>Netflix Shows Reviews</h1>
+	<h2>- Overview of All Categories -</h2>
+</header>
+	<div th:each="currentCategory: ${categories}" class="title-content">
 		<h2><a th:href="@{/netflixShow(id=${currentCategory.id})}"
 		th:text="${currentCategory.categoryName}"></a></h2>
 	</div>
