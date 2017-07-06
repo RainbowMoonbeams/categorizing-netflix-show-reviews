@@ -2,7 +2,7 @@ a link {
 	color: #f19f4d;
 }
 a:visited {
-	color: #f9cf00;	
+	color: #004080;	
 }
 a:hover {
 	color: #f9cf00;
@@ -14,9 +14,9 @@ body {
 	padding: auto;
 }
 .block-of-info, .title-content, .content {
-	border: 10px solid #f19f4d;
+	border: 10px solid darkgreen;
 	padding: 30px;
-	background-color: orange;
+	background-color: lightgreen;
 }
 .content {
 	align-content: center;
@@ -51,7 +51,7 @@ header {
 	margin-bottom: 50px;
 }
 header, footer {
-	background-color: #f19f4d;
+	background-color: #0080ff;
 	padding: 20px;
 	padding-left: 20px;
 	padding-right: 20px;
